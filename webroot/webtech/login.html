@@ -1,0 +1,75 @@
+<!DOCTYPE = html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <title>Parth Shah</title>
+  <link rel="stylesheet" href="reset.css" type="text/css"/>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="topnav">
+    <h1>Parth Shah</h1>
+    <a href="blog.php">Blog</a>
+    <a href="Portfolio.html">Portfolio/CV</a>
+    <a href="Experience.php">Experience</a>
+    <a href="Contact.phpl">Contact</a>
+    <a href="Homepage.php">Homepage</a>
+  </div>
+  <aside>
+    <div class="sidebar">
+      <a href="Skills.html">Skills and Achievements</a>
+      <a href="https://www.linkedin.com/in/parth-shah-2025/">LinkedIn</a>
+    </div>
+  </aside>
+  <form method="POST" action="login.php" id="form0">
+    <legend>Log In</legend>
+    <br>
+    <fieldset>
+      <label>Username:</label>
+         <br>
+         <input type="text" name="username" required="true">
+         <br>
+         <label>Password:</label>
+         <br>
+         <input type="password" name="password" required="true">
+         <br>
+         <input type="submit">
+         <input type="button" onclick="formclear0()" value="Reset form">
+    </fieldset>
+  </form>
+  <form method="POST" action="register.php" id="form1">
+    <legend>Register</legend>
+    <br>
+    <fieldset>
+      <label>Enter a Username: </label>
+      <br>
+      <input type="text" name="username" required="true">
+      <br>
+      <label>Enter a Password: </label>
+      <br>
+      <input type="password" name="password" required="true">
+      <br>
+      <label>Confirm Password: </label>
+      <br>
+      <input type="password" name="passwordconfirm" required="true">
+      <br>
+      <input type="submit">
+      <input type="button" onclick="formclear1()" value="Reset form">
+    </fieldset>
+  <form>
+<script>
+  function formclear0()
+  {
+    document.getElementById("form0").reset();
+  }
+  function formclear1()
+  {
+    document.getElementById("form1").reset();
+  }
+</script>
+<footer>
+  <hr>
+  <p>© 2020 Parth Shah | <a class="footercl" href="https://www.qmul.ac.uk/">QMUL</a></p>
+</footer>
+</body>
+</html>

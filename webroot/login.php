@@ -26,5 +26,6 @@
       $_SESSION['super'] = true;
     }
     header("Location: Homepage.php");
+    echo "<script>window.alert('You have succesfully logged in');document.location='Homepage.php'</script>";
   }
 ?>

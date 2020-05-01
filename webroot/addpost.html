@@ -1,0 +1,33 @@
+<!DOCTYPE = html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <title>Parth Shah</title>
+  <link rel="stylesheet" href="reset.css" type="text/css"/>
+  <link rel="stylesheet" href="addpost.css">
+</head>
+<body>
+  <form method="POST" action="addpost.php" id="form0">
+      <br>
+      <fieldset>
+        <label>Enter Post Title:</label>
+        <br>
+        <input type="text" name="title" required="true">
+        <br>
+        <label>Enter Post Text:</label>
+        <br>
+        <textarea id="post" name="text" rows="10" cols="50"></textarea>
+        <br>
+        <input type="submit">
+        <input type="button" onclick="formclear0()" value="clear">
+        <input type="button" onclick="window.location.href ='blog.php';" value="Back">
+      </fieldset>
+  </form>
+  <script>
+    function formclear0()
+    {
+      document.getElementById("form0").reset();
+    }
+  </script>
+</body>
+</html>

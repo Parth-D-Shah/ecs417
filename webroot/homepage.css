@@ -113,4 +113,6 @@ ul{
     text-align: center;
     float: none;
   }
+  .sidebar a {float: left;}
+  article {margin-left: 0;}
 }

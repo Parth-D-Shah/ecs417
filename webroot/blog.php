@@ -24,7 +24,6 @@
         $dbpwd = getenv("DATABASE_PASSWORD");
         $dbname = getenv("DATABASE_NAME");
         $db = new mysqli($dbhost, $dbuser, $dbpwd, $dbname) or die("Cant Connect to database");
-        #$db = new mysqli('localhost','root','','webtech') or die("Cant Connect to database");
         $query = mysqli_query($db,"SELECT * FROM post ORDER BY ID DESC") or die("Database error");
         if(mysqli_num_rows($query) > 0)
         {

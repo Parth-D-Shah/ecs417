@@ -1,6 +1,11 @@
 <?php
 session_start();
-$db = new mysqli('localhost','root','','webtech') or die("Cant Connect to database");
+$dbhost = getenv("MYSQL_SERVICE_HOST");
+$dbport = getenv("MYSQL_SERVICE_PORT");
+$dbuser = getenv("DATABASE_USER");
+$dbpwd = getenv("DATABASE_PASSWORD");
+$dbname = getenv("DATABASE_NAME");
+$db = new mysqli($dbhost, $dbuser, $dbpwd, $dbname) or die("Cant Connect to database");
 $title = $_POST['title'];
 $text = $_POST['text'];
 $date = date("l jS \of F Y h:i:s A");

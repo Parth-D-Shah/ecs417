@@ -46,7 +46,7 @@
       <p>My name is Parth Shah and I am a first year student within the School of Engineering and Computer Science(eecs) at Queen Mary University Of London.<br>
       <br>I was born and brought up in Edgware (in the borough of Harrow - part North West London). My favourite subjects to study about are: Computer Science,<br>
       <br>Biology, Chemistry, Maths and Astronomy. My hobbies include playing video games creating mods for video games and anything tech related. I also<br>
-      <br> consider myself a devout hindu and I love debating philosophy with friends.</p>
+      <br>know how to program in java, C++, python, PHP and MYSQL.</p>
     </section>
     <figure>
       <img src="parth.jpg">

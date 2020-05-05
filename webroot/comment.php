@@ -37,12 +37,12 @@
             $user_id = $commentrow['user_ID'];
             echo '<br><h1>User: $user_id</h1><br><p>$comment_text</p><br>';
           }
-      }
         else
         {
           echo 'No Comments to Display';
         }
         echo "<form method='POST' action='commentprocess.php'><input type='hidden' name='id' value='$id'><label>Enter Comment</label><br><textarea name='text' rows='10' cols='50' required='true'></textarea><br><input type='submit'></form>";
+      }
       elseif($_SESSION['logged_in'] == true)
       {
         echo "<br><h3>Title: $title<h3><br><p>$text</p><br><p>Time: $date</p><br><hr>";

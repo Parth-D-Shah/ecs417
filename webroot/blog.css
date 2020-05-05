@@ -20,6 +20,28 @@ body{
   font-size: 17px;
 }
 
+.button a{
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.button a{
+  background-color: #4CAF50;
+  color: black;
+  border: 2px solid #4CAF50;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
 .topnav h1 {
   float: left;
   color: #f2f2f2;

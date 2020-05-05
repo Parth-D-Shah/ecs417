@@ -35,14 +35,14 @@
             $comment_id = $commentrow['ID'];
             $comment_text = $commentrow['comment_text'];
             $user_id = $commentrow['user_ID'];
-            echo "<br><h1>User: $user_id</h1><br><p>$comment_text</p><form method='POST' action='commentdelete.php'><input type='hidden' name='id' value=''$comment_id'><br><input type='submit' value='Delete'></form><br>";
+            echo "<br><h1>User: $user_id</h1><br><h1>Comment: </h1><br><p>$comment_text</p><form method='POST' action='commentdelete.php'><input type='hidden' name='id' value=''$comment_id'><br><input type='submit' value='Delete'></form><br><hr>";
           }
         }
         else
         {
-          echo 'No Comments to Display<br>';
+          echo '<br>No Comments to Display<br>';
         }
-        echo "<form method='POST' action='commentprocess.php'><input type='hidden' name='id' value='$id'><label>Enter Comment</label><br><textarea name='text' rows='10' cols='50' required='true'></textarea><br><input type='submit'><input type='button' onclick='window.location.href ='blog.php';' value='Back'></form>";
+        echo "<form method='POST' action='commentprocess.php'><input type='hidden' name='id' value='$id'><label>Enter Comment</label><br><textarea name='text' rows='10' cols='50' required='true'></textarea><br><input type='submit'></form>";
       }
       elseif($_SESSION['logged_in'] == true)
       {
@@ -54,14 +54,14 @@
             $comment_id = $commentrow['ID'];
             $comment_text = $commentrow['comment_text'];
             $user_id = $commentrow['user_ID'];
-            echo "<br><h1>User: $user_id</h1><br><p>$comment_text</p><br>";
+            echo "<br><h1>User: $user_id</h1><br><h1>Comment: </h1><br><p>$comment_text</p><br><hr>";
           }
         }
         else
         {
-          echo 'No Comments to Display<br>';
+          echo '<br>No Comments to Display<br>';
         }
-        echo "<form method='POST' action='commentprocess.php'><input type='hidden' name='id' value='$id'><label>Enter Comment</label><br><textarea name='text' rows='3' cols='50' required='true'></textarea><br><input type='submit'><input type='button' onclick='window.location.href ='blog.php';' value='Back'></form>";
+        echo "<form method='POST' action='commentprocess.php'><input type='hidden' name='id' value='$id'><label>Enter Comment</label><br><textarea name='text' rows='3' cols='50' required='true'></textarea><br><input type='submit'></form>";
       }
       else
       {
@@ -71,9 +71,9 @@
           $comment_id = $commentrow['ID'];
           $comment_text = $commentrow['comment_text'];
           $user_id = $commentrow['user_ID'];
-          echo "<br><h1>User: $user_id</h1><br><p>$comment_text</p><br>";
+          echo "<br><h1>User: $user_id</h1><br><h1>Comment: </h1><br><p>$comment_text</p><br><hr>";
         }
-        echo 'You must log in or register to add a comment<br><form><input type="button" onclick="window.location.href ="blog.php";" value="Back"></form>';
+        echo 'You must log in or register to add a comment<br></form>';
       }
     ?>
   </div>

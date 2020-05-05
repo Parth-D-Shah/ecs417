@@ -9,6 +9,9 @@
 <body>
   <div>
     <h1>Post</h1>
+    <br>
+    <a href="blog.php" class="button">Back</a>
+    <br>
     <?php
       session_start();
       $dbhost = getenv("MYSQL_SERVICE_HOST");
@@ -51,9 +54,9 @@
           $comment_id = $commentrow['ID'];
           $comment_text = $commentrow['comment_text'];
           $user_id = $commentrow['user_ID'];
-          echo '<br><h1>User: $user_id</h1><br><p>$comment_text</p><br>';
+          echo '<br><h1>User: $user_id</h1><br><p>$comment_text</p><form method="POST" action="commentdelete.php"><input type="hidden" name="id" value="$comment_id"><br><input type="submit" value="Delete"></form><br>';
         }
-        echo "<form method='POST' action='commentprocess.php'><input type='hidden' name='id' value='$id'><label>Enter Comment</label><br><textarea name='text' rows='10' cols='50' required='true'></textarea><br><input type='submit'></form>";
+        echo "<form method='POST' action='commentprocess.php'><input type='hidden' name='id' value='$id'><label>Enter Comment</label><br><textarea name='text' rows='3' cols='50' required='true'></textarea><br><input type='submit'></form>";
       }
       else
       {

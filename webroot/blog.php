@@ -40,7 +40,13 @@
             else
             {
               echo "<br><h3>Title: $title<h3><br><p>$text</p><br><p>Time: $date</p><br><form method='POST' action='comment.php'><input type='hidden' name='id' value='$id'><input type='submit' value='Add/View Comment'></form><br><hr>";
+            }
           }
+        }
+        else
+        {
+          echo'<br>';
+          echo'<h2>No Posts have been made yet check back another time</h2>';
           if(isset($_SESSION['logged_in']))
           {
             if($_SESSION['super'] == true)
@@ -49,20 +55,7 @@
             }
           }
         }
-      }
-      else
-      {
-        echo'<br>';
-        echo'<h2>No Posts have been made yet check back another time</h2>';
-        if(isset($_SESSION['logged_in']))
-        {
-          if($_SESSION['super'] == true)
-          {
-            echo'<br><a href="addpost.html" class="button">Add Post<a>';
-          }
-        }
-      }
-    ?>
-  </div>
+        ?>
+      </div>
 </body>
 </html>

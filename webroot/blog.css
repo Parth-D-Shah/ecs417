@@ -11,11 +11,6 @@ body{
   overflow: hidden;
 }
 
-input{
-  width: 0%;
-  border: none;
-}
-
 .topnav a {
   float: left;
   color: #f2f2f2;

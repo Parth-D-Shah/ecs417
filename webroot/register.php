@@ -17,15 +17,17 @@
   $sql = "INSERT INTO user (username,password) VALUES ('$username','$password')";
   if ($db->query($sql) === TRUE)
   {
+    $_SESSION['logged_in'] = true;
+    $_SESSION['name'] == $username;
     header('Location: Homepage.php');
   }
   else
   {
     echo "Error: " . $sql . "<br>" . $db->error;
   }
-  $_SESSION['logged_in'] = true;
-  if(isset($_SESSION['logged_in']) && ($_SESSION['logged_in'] == true))
-  {
-    header('Location: Homepage.php');
-  }
+//  $_SESSION['logged_in'] = true;
+  //if(isset($_SESSION['logged_in']) && ($_SESSION['logged_in'] == true))
+//  {
+//    header('Location: Homepage.php');
+//  }
 ?>

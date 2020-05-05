@@ -21,6 +21,7 @@
   }
   if(isset($_SESSION['logged_in']) && ($_SESSION['logged_in'] == true))
   {
+    $_SESSION['name'] == $username;
     if(($username == 'admin@parth.com')&&($password == root))
     {
       $_SESSION['super'] = true;

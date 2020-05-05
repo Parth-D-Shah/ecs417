@@ -7,4 +7,5 @@
     $dbname = getenv("DATABASE_NAME");
     $db = new mysqli($dbhost, $dbuser, $dbpwd, $dbname) or die("Cant Connect to database");
     echo'test working!';
+    echo'$_POST['id']';
     ?>

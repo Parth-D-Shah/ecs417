@@ -6,10 +6,10 @@
   $dbpwd = getenv("DATABASE_PASSWORD");
   $dbname = getenv("DATABASE_NAME");
   $db = new mysqli($dbhost, $dbuser, $dbpwd, $dbname) or die("Cant Connect to database");
-  $commentid = $_POST['id'];
+  $postid = $_POST['id'];
   $commenttext = $_POST['text'];
   $user = $_SESSION['name']
-  $sql = "INSERT INTO comment (comment_text,post_ID,user_ID) VALUES ('$commenttext','$commentid','$user')";
+  $sql = "INSERT INTO comment (comment_text,post_ID,user_ID) VALUES ('$commenttext','$postid','$user')";
   if ($db->query($sql) === TRUE)
   {
     header('Location: blog.php');

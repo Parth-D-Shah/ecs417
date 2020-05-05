@@ -30,8 +30,6 @@
       if($_SESSION['super'] == true)
       {
         echo "<br><h3>Post ID: $id <br><br> Title: $title<h3><br><p>$text</p><br><p>Time: $date</p><br><hr>";
-        if(mysqli_num_rows($commetquery) > 0)
-        {
           while($commentrow = mysqli_fetch_assoc($commentquery))
           {
             $comment_id = $commentrow['ID'];

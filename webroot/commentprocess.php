@@ -9,8 +9,8 @@
   $commentid = $_POST['id'];
   $commenttext = $_POST['text'];
   $user = $_SESSION['name']
-  $query = mysqli_query($db,"INSERT INTO comment (comment_text,post_ID,user_ID) VALUES ('$commenttext','$commentid','$user') or die("Database error");
-  if ($db->query($query) === TRUE)
+  $sql = "INSERT INTO comment (comment_text,post_ID,user_ID) VALUES ('$commenttext','$commentid','$user')";
+  if ($db->query($sql) === TRUE)
   {
     header('Location: blog.php');
   }

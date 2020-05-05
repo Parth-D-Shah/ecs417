@@ -26,10 +26,10 @@
       $title = $row['post_title'];
       $text = $row['post_text'];
       $date = $row['post_date'];
+      $commentquery = mysqli_query($db,"SELECT * FROM comment WHERE post_ID = '$id'") or die("Database error");
       if($_SESSION['super'] == true)
       {
         echo "<br><h3>Post ID: $id <br><br> Title: $title<h3><br><p>$text</p><br><p>Time: $date</p><br><hr>";
-        $commentquery = mysqli_query($db,"SELECT * FROM comment WHERE post_ID = '$id'") or die("Database error");
         if(mysqli_num_rows($commentquery) > 0)
         {
           while($commentrow = mysqli_fetch_assoc($commentquery))
@@ -37,7 +37,7 @@
             $comment_id = $commentrow['ID'];
             $comment_text = $commentrow['comment_text'];
             $user_id = $commentrow['user_ID'];
-            echo '<br><h1>User: $user_id</h1><br><p>$comment_text</p><br>';
+            echo "<br><h1>User: $user_id</h1><br><p>$comment_text</p><form method='POST' action='commentdelete.php'><input type='hidden' name='id' value=''$comment_id'><br><input type='submit' value='Delete'></form><br>";
           }
         }
         else
@@ -54,7 +54,7 @@
           $comment_id = $commentrow['ID'];
           $comment_text = $commentrow['comment_text'];
           $user_id = $commentrow['user_ID'];
-          echo '<br><h1>User: $user_id</h1><br><p>$comment_text</p><form method="POST" action="commentdelete.php"><input type="hidden" name="id" value="$comment_id"><br><input type="submit" value="Delete"></form><br>';
+          echo '<br><h1>User: $user_id</h1><br><p>$comment_text</p><br>';
         }
         echo "<form method='POST' action='commentprocess.php'><input type='hidden' name='id' value='$id'><label>Enter Comment</label><br><textarea name='text' rows='3' cols='50' required='true'></textarea><br><input type='submit'></form>";
       }

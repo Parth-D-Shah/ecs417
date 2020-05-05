@@ -8,7 +8,7 @@
   $db = new mysqli($dbhost, $dbuser, $dbpwd, $dbname) or die("Cant Connect to database");
   $postid = $_POST['id'];
   $commenttext = $_POST['text'];
-  $user = $_SESSION['name']
+  $user = $_SESSION['name'];
   $sql = "INSERT INTO comment (comment_text,post_ID,user_ID) VALUES ('$commenttext','$postid','$user')";
   if ($db->query($sql) === TRUE)
   {

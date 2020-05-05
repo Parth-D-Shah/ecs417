@@ -22,7 +22,6 @@
       $db = new mysqli($dbhost, $dbuser, $dbpwd, $dbname) or die("Cant Connect to database");
       $id = $_POST['id'];
       $query = mysqli_query($db,"SELECT * FROM post WHERE id = '$id'") or die("Database error");
-      $commentquery = mysqli_query($db,"SELECT * FROM comment WHERE post_ID = '$id'") or die("Database error");
       $row = mysqli_fetch_assoc($query);
       $title = $row['post_title'];
       $text = $row['post_text'];
@@ -30,6 +29,9 @@
       if($_SESSION['super'] == true)
       {
         echo "<br><h3>Post ID: $id <br><br> Title: $title<h3><br><p>$text</p><br><p>Time: $date</p><br><hr>";
+        $commentquery = mysqli_query($db,"SELECT * FROM comment WHERE post_ID = '$id'") or die("Database error");
+        if(mysqli_num_rows($commentquery) > 0)
+        {
           while($commentrow = mysqli_fetch_assoc($commentquery))
           {
             $comment_id = $commentrow['ID'];
@@ -37,6 +39,7 @@
             $user_id = $commentrow['user_ID'];
             echo '<br><h1>User: $user_id</h1><br><p>$comment_text</p><br>';
           }
+        }
         else
         {
           echo 'No Comments to Display';

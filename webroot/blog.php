@@ -49,19 +49,20 @@
             }
           }
         }
-        else
+      }
+      else
+      {
+        echo'<br>';
+        echo'<h2>No Posts have been made yet check back another time</h2>';
+        if(isset($_SESSION['logged_in']))
         {
-          echo'<br>';
-          echo'<h2>No Posts have been made yet check back another time</h2>';
-          if(isset($_SESSION['logged_in']))
+          if($_SESSION['super'] == true)
           {
-            if($_SESSION['super'] == true)
-            {
-              echo'<br><a href="addpost.html">Add Post<a>';
-            }
+            echo'<br><a href="addpost.html">Add Post<a>';
           }
         }
-      ?>
+      }
+    ?>
   </div>
 </body>
 </html>

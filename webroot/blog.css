@@ -20,7 +20,7 @@ body{
   font-size: 17px;
 }
 
-.button a{
+.button{
   background-color: white;
   color: black;
   border: 2px solid #4CAF50;
@@ -31,7 +31,7 @@ body{
   margin-left: 20px;
 }
 
-.button a{
+.button:hover{
   background-color: #4CAF50;
   color: black;
   border: 2px solid #4CAF50;

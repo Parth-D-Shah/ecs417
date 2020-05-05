@@ -54,7 +54,7 @@
           $comment_id = $commentrow['ID'];
           $comment_text = $commentrow['comment_text'];
           $user_id = $commentrow['user_ID'];
-          echo '<br><h1>User: $user_id</h1><br><p>$comment_text</p><br>';
+          echo "<br><h1>User: $user_id</h1><br><p>$comment_text</p><br>";
         }
         echo "<form method='POST' action='commentprocess.php'><input type='hidden' name='id' value='$id'><label>Enter Comment</label><br><textarea name='text' rows='3' cols='50' required='true'></textarea><br><input type='submit'></form>";
       }
@@ -66,7 +66,7 @@
           $comment_id = $commentrow['ID'];
           $comment_text = $commentrow['comment_text'];
           $user_id = $commentrow['user_ID'];
-          echo '<br><h1>User: $user_id</h1><br><p>$comment_text</p><br>';
+          echo "<br><h1>User: $user_id</h1><br><p>$comment_text</p><br>";
         }
         echo 'You must log in or register to add a comment';
       }

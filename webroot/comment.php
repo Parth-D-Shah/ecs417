@@ -7,10 +7,8 @@
   <link rel="stylesheet" href="comment.css">
 </head>
 <body>
-  <div>
+  <div class="post">
     <h1>Post</h1>
-    <br>
-    <a href="blog.php" class="button">Back</a>
     <br>
     <?php
       session_start();
@@ -42,21 +40,28 @@
         }
         else
         {
-          echo 'No Comments to Display';
+          echo 'No Comments to Display<br>';
         }
-        echo "<form method='POST' action='commentprocess.php'><input type='hidden' name='id' value='$id'><label>Enter Comment</label><br><textarea name='text' rows='10' cols='50' required='true'></textarea><br><input type='submit'></form>";
+        echo "<form method='POST' action='commentprocess.php'><input type='hidden' name='id' value='$id'><label>Enter Comment</label><br><textarea name='text' rows='10' cols='50' required='true'></textarea><br><input type='submit'><input type='button' onclick='window.location.href ='blog.php';' value='Back'></form>";
       }
       elseif($_SESSION['logged_in'] == true)
       {
         echo "<br><h3>Title: $title<h3><br><p>$text</p><br><p>Time: $date</p><br><hr>";
-        while($commentrow = mysqli_fetch_assoc($commentquery))
+        if(mysqli_num_rows($commentquery) > 0)
         {
-          $comment_id = $commentrow['ID'];
-          $comment_text = $commentrow['comment_text'];
-          $user_id = $commentrow['user_ID'];
-          echo "<br><h1>User: $user_id</h1><br><p>$comment_text</p><br>";
+          while($commentrow = mysqli_fetch_assoc($commentquery))
+          {
+            $comment_id = $commentrow['ID'];
+            $comment_text = $commentrow['comment_text'];
+            $user_id = $commentrow['user_ID'];
+            echo "<br><h1>User: $user_id</h1><br><p>$comment_text</p><br>";
+          }
         }
-        echo "<form method='POST' action='commentprocess.php'><input type='hidden' name='id' value='$id'><label>Enter Comment</label><br><textarea name='text' rows='3' cols='50' required='true'></textarea><br><input type='submit'></form>";
+        else
+        {
+          echo 'No Comments to Display<br>';
+        }
+        echo "<form method='POST' action='commentprocess.php'><input type='hidden' name='id' value='$id'><label>Enter Comment</label><br><textarea name='text' rows='3' cols='50' required='true'></textarea><br><input type='submit'><input type='button' onclick='window.location.href ='blog.php';' value='Back'></form>";
       }
       else
       {
@@ -68,7 +73,7 @@
           $user_id = $commentrow['user_ID'];
           echo "<br><h1>User: $user_id</h1><br><p>$comment_text</p><br>";
         }
-        echo 'You must log in or register to add a comment';
+        echo 'You must log in or register to add a comment<br><form><input type="button" onclick="window.location.href ="blog.php";" value="Back"></form>';
       }
     ?>
   </div>

@@ -35,11 +35,11 @@
             $date = $currentrow['post_date'];
             if($_SESSION['super'] == true)
             {
-              echo "<br><h3>Post ID: $id <br><br> Title: $title<h3><br><p>$text</p><br><p>Time: $date</p><br><a href='delete.html'>Delete Post<a><form method="POST" action="comment.php" id="form0"><label>Enter Comment:</label><textarea id="post" name="text" rows="10" cols="50" required="true"></textarea></form><br><hr>";
+              echo "<br><h3>Post ID: $id <br><br> Title: $title<h3><br><p>$text</p><br><p>Time: $date</p><br><a href='delete.html'>Delete Post<a><form method='POST' action='comment.php' id='form0'><input type='text' value='$id'><label>Enter Comment:</label><textarea id='post' name='text' rows='10' cols='50' required='true'></textarea></form><br><hr>";
             }
             else
             {
-              echo "<br><h3>Title: $title<h3><br><p>$text</p><br><p>Time: $date</p><br><form method="POST" action="comment.php" id="form0"><label>Enter Comment:</label><textarea id="post" name="text" rows="10" cols="50" required="true"></textarea></form><br><hr>";
+              echo "<br><h3>Title: $title<h3><br><p>$text</p><br><p>Time: $date</p><br><form method='POST' action='comment.php' id='form0'><input type='text' value='$id'><label>Enter Comment:</label><textarea id='post' name='text' rows='10' cols='50' required='true'></textarea></form><br><hr>";
             }
           }
           if(isset($_SESSION['logged_in']))

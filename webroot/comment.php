@@ -35,7 +35,7 @@
             $comment_id = $commentrow['ID'];
             $comment_text = $commentrow['comment_text'];
             $user_id = $commentrow['user_ID'];
-            echo "<br><h1>User: $user_id</h1><br><h1>Comment: </h1><br><p>$comment_text</p><form method='POST' action='commentdelete.php'><input type='hidden' name='id' value=''$comment_id'><br><input type='submit' value='Delete'></form><br><hr>";
+            echo "<br><h1>User: $user_id</h1><br><h1>Comment: </h1><br><p>$comment_text</p><form method='POST' action='commentdelete.php'><input type='hidden' name='id' value='$comment_id'><br><input type='submit' value='Delete'></form><br><hr>";
           }
         }
         else

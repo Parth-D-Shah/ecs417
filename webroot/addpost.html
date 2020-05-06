@@ -12,13 +12,13 @@
       <fieldset>
         <label>Enter Post Title:</label>
         <br>
-        <input type="text" name="title" class="input1" required="true">
+        <input type="text" id="title" name="title" class="input1">
         <br>
         <label>Enter Post Text:</label>
         <br>
-        <textarea id="post" name="text" rows="10" cols="50" required="true"></textarea>
+        <textarea id="post" name="text" rows="10" cols="50"></textarea>
         <br>
-        <input type="submit">
+        <input type="submit" id="submit">
         <input type="button" onclick="formclear0()" value="clear">
         <input type="button" onclick="window.location.href ='blog.php';" value="Back">
       </fieldset>
@@ -27,6 +27,13 @@
     function formclear0()
     {
       document.getElementById("form0").reset();
+    }
+    function checkform()
+    {
+      if((document.getElementById("title").value == "")||(document.getElementById("post").value == ""))
+      {
+        document.getElementById("submit").addEventListener("click",function(event){event.preventDefault()});
+      }
     }
   </script>
 </body>

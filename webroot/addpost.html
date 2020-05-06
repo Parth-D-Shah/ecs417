@@ -32,8 +32,8 @@
     {
       if((document.getElementById("title").value == "")||(document.getElementById("post").value == ""))
       {
-        alert("works!");
         document.getElementById("form0").addEventListener("submit", (event) => {event.preventDefault();});
+        location.reload();
       }
     }
   </script>

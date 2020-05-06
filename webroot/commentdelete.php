@@ -7,7 +7,7 @@
   $dbname = getenv("DATABASE_NAME");
   $db = new mysqli($dbhost, $dbuser, $dbpwd, $dbname) or die("Cant Connect to database");
   $data = $_POST['id'];
-  $sql = "DELETE FROM comment WHERE id = $data";
+  $sql = "DELETE FROM comment WHERE id = '$data'";
   if ($db->query($sql) === TRUE)
   {
     header('Location: blog.php');

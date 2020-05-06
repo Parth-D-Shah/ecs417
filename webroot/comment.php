@@ -43,7 +43,7 @@
           echo '<br>No Comments to Display<br>';
         }
         echo "<form method='POST' action='commentprocess.php'><input type='hidden' name='id' value='$id'><label>Enter Comment</label><br><textarea name='text' rows='10' cols='50' required='true'></textarea><br><input type='submit'></form>";
-        echo'<br><a href="blog.php" class="button">Back<a>';
+        echo'<br><br><a href="blog.php" class="button">Back<a>';
       }
       elseif($_SESSION['logged_in'] == true)
       {
@@ -63,7 +63,7 @@
           echo '<br>No Comments to Display<br>';
         }
         echo "<form method='POST' action='commentprocess.php'><input type='hidden' name='id' value='$id'><label>Enter Comment</label><br><textarea name='text' rows='3' cols='50' required='true'></textarea><br><input type='submit'></form>";
-        echo'<br><a href="blog.php" class="button">Back<a>';
+        echo'<br><br><a href="blog.php" class="button">Back<a>';
       }
       else
       {
@@ -76,7 +76,7 @@
           echo "<br><h1>User: $user_id</h1><br><h1>Comment: </h1><br><p>$comment_text</p><br><hr>";
         }
         echo 'You must log in or register to add a comment<br></form>';
-        echo'<br><a href="blog.php" class="button">Back<a>';
+        echo'<br><br><a href="blog.php" class="button">Back<a>';
       }
     ?>
   </div>

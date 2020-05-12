@@ -25,6 +25,7 @@
     if(($username == 'admin@parth.com')&&($password == root))
     {
       $_SESSION['super'] = true;
+      echo "<script>window.alert('Welcome back admin');document.location='addpost.html'</script>";
     }
     echo "<script>window.alert('You have succesfully logged in');document.location='Homepage.php'</script>";
   }

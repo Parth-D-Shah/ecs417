@@ -18,7 +18,7 @@
         <br>
         <textarea id="post" name="text" rows="10" cols="50"></textarea>
         <br>
-        <input type="submit" onclick="checkform()" id="submit">
+        <input type="submit" id="submit">
         <input type="button" onclick="formclear0()" value="clear">
         <input type="button" onclick="window.location.href ='blog.php';" value="Back">
       </fieldset>
@@ -28,24 +28,20 @@
     {
       document.getElementById("form0").reset();
     }
-    function checkform()
-    {
-      if((document.getElementById("title").value == "")||(document.getElementById("post").value == ""))
-      {
-        document.getElementById("form0").addEventListener("submit", (event) => {event.preventDefault();});
-        //location.reload();
+
+    document.querySelector("#submit").addEventListener('click', function(event) {
+      var title = document.getElementById("title");
+      var post= document.getElementById("post");
+      if (title.value == "")
+       {
+          event.preventDefault():
+          title.style.backgroundColor = "red";
       }
-      var title=document.getElementById('title').value;
-      var post=document.getElementById('post').value;
-      if(title == "")
-      {
-        document.getElementById('title').style.backgroundColor = "red";
-      }
-      if(post == "")
-      {
-        document.getElementById('post').style.backgroundColor = "red";
-      }
-    }
+      if (post.value == "")
+       {
+          event.preventDefault():
+          post.style.backgroundColor = "red";
+      }},false);
   </script>
 </body>
 </html>

@@ -12,36 +12,46 @@
       <fieldset>
         <label>Enter Post Title:</label>
         <br>
-        <input type="text" id="title" name="title" class="input1">
+        <input type="text" id="title" onkeypress="removeprevent()" name="title" class="input1">
         <br>
         <label>Enter Post Text:</label>
         <br>
-        <textarea id="post" name="text" rows="10" cols="50"></textarea>
+        <textarea id="post" name="text" onkeypress="removeprevent()" rows="10" cols="50"></textarea>
         <br>
-        <input type="submit" id="submit">
+        <input type="submit" onclick="checkform()" id="submit">
         <input type="button" onclick="formclear0()" value="clear">
         <input type="button" onclick="window.location.href ='blog.php';" value="Back">
       </fieldset>
   </form>
   <script>
+    function removeprevent()
+    {
+      document.getElementById("form0").addEventListener("submit", (event){ return true;}
+    }
     function formclear0()
     {
       document.getElementById("form0").reset();
     }
-
-    document.querySelector("#submit").addEventListener('click', function(event) {
-      var title = document.getElementById("title");
-      var post= document.getElementById("post");
-      if (title.value == "")
-       {
-          event.preventDefault():
-          title.style.backgroundColor = "red";
+    function checkform()
+    {
+      if((document.getElementById("title").value == "")||(document.getElementById("post").value == ""))
+      {
+        document.getElementById("form0").addEventListener("submit", (event) => {
+          event.preventDefault();
+        });
+        //location.reload();
       }
-      if (post.value == "")
-       {
-          event.preventDefault():
-          post.style.backgroundColor = "red";
-      }},false);
+      var title=document.getElementById('title').value;
+      var post=document.getElementById('post').value;
+      if(title == "")
+      {
+        document.getElementById('title').style.backgroundColor = "red";
+      }
+      if(post == "")
+      {
+        document.getElementById('post').style.backgroundColor = "red";
+      }
+    }
   </script>
 </body>
 </html>

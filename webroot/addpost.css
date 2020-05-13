@@ -9,19 +9,3 @@ body{
 form{
   margin-left: 40%;
 }
-
-input:invalid{
-  background-color: lightpink;
-}
-
-textarea:invalid{
-  background-color: lightpink;
-}
-
-.input1:valid{
-  background-color: palegreen;
-}
-
-textarea:valid{
-  background-color: palegreen;
-}

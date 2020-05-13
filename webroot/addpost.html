@@ -35,6 +35,16 @@
         document.getElementById("form0").addEventListener("submit", (event) => {event.preventDefault();});
         location.reload();
       }
+      var title=document.getElementById('title').value;
+      var post=document.getElementById('post').value;
+      if(title == "")
+      {
+        document.getElementById('title').style.backgroundColor = "red";
+      }
+      if(post == "")
+      {
+        document.getElementById('post').style.backgroundColor = "red";
+      }
     }
   </script>
 </body>

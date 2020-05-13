@@ -30,11 +30,16 @@
     }
     function checkform()
     {
-      location.reload();
       if((document.getElementById("title").value == "")||(document.getElementById("post").value == ""))
       {
-        document.getElementById("form0").addEventListener("submit", (event) => {event.preventDefault();});
+        ev.preventDefault();
+        //document.getElementById("form0").addEventListener("submit", (event) => {event.preventDefault();});
         //location.reload();
+        $(this).unbind('submit').submit()
+      }
+      else
+      {
+        document.getElementById("form0").addEventListener("submit", (event) => {event.preventDefault();});
       }
       var title=document.getElementById('title').value;
       var post=document.getElementById('post').value;

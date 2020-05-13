@@ -12,11 +12,11 @@
       <fieldset>
         <label>Enter Post Title:</label>
         <br>
-        <input type="text" id="title" name="title" onkeydown="removeprevent()" class="input1">
+        <input type="text" id="title" name="title" class="input1">
         <br>
         <label>Enter Post Text:</label>
         <br>
-        <textarea id="post" name="text" rows="10" onkeydown="removeprevent()" cols="50"></textarea>
+        <textarea id="post" name="text" rows="10" cols="50"></textarea>
         <br>
         <input type="submit" onclick="checkform()" id="submit">
         <input type="button" onclick="formclear0()" value="clear">
@@ -27,10 +27,6 @@
     function formclear0()
     {
       document.getElementById("form0").reset();
-    }
-    function removeprevent()
-    {
-      document.getElementById("form0").removeEventListener("submit", (event) => {event.preventDefault();});
     }
     function checkform()
     {

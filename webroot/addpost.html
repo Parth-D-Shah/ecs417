@@ -18,7 +18,7 @@
         <br>
         <textarea id="post" name="text" rows="10" cols="50"></textarea>
         <br>
-        <input type="submit" onsubmit="checkform()" id="submit">
+        <input type="submit" onclick="checkform()" id="submit">
         <input type="button" onclick="formclear0()" value="clear">
         <input type="button" onclick="window.location.href ='blog.php';" value="Back">
       </fieldset>
@@ -32,7 +32,12 @@
     {
       if((document.getElementById("title").value == "")||(document.getElementById("post").value == ""))
       {
-        document.getElementById("form0").addEventListener("submit", (event) => {event.preventDefault();});
+        let form = document.getElementById('form0');
+        form.onsubmit=function()
+        {
+            return false;
+        }
+        //document.getElementById("form0").addEventListener("submit", (event) => {event.preventDefault();});
         //location.reload();
       }
       var title=document.getElementById('title').value;

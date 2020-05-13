@@ -32,16 +32,15 @@
     {
       if((document.getElementById("title").value == "")||(document.getElementById("post").value == ""))
       {
-        let form = document.getElementById('form0');
-        form.onsubmit=function()
-        {
-            return false;
-        }
-        //document.getElementById("form0").addEventListener("submit", (event) => {event.preventDefault();});
+        document.getElementById("form0").addEventListener("submit", (event) => {event.preventDefault();});
         //location.reload();
       }
       var title=document.getElementById('title').value;
       var post=document.getElementById('post').value;
+      red(title,post);
+    }
+    fucntion red(title,post)
+    {
       if(title == "")
       {
         document.getElementById('title').style.backgroundColor = "red";

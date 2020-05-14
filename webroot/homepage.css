@@ -51,7 +51,7 @@ p{
 .sidebar {
   text-align: center;
   width: 15%;
-  background-color: #333;
+  background-color: #f1f1f1;
   position: fixed;
   height: 84.7%;
 }
@@ -81,7 +81,7 @@ figcaption{
 
 .sidebar a {
   display: block;
-  color: #ddd;
+  color: black;
   padding: 16px;
   text-decoration: none;
 }

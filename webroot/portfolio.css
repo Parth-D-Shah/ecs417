@@ -12,6 +12,7 @@ html{
 body{
   font-family: sans-serif,serif;
   background-color: #e0e0e0;
+  background-image: url("background.png");
 }
 
 .topnav {

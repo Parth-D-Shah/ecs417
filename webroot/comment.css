@@ -1,12 +1,13 @@
 html{
   font-size: 100%;
 }
-
+/*setting font size to be 100% as standard*/
 body{
   font-family: sans-serif,serif;
   background-image: url("background.png");
 }
-
+/*Put font family to sans-serif as first choice and if the computer does not have that style then font family will be serif
+Also changing the background colour to a tile png*/
 .button {
   background-color: white;
   color: black;
@@ -17,7 +18,7 @@ body{
   font-size: 16px;
   margin-left: 10px;
 }
-
+/*class for some <a> tags in my code which will give them a button like appearance*/
 .button:hover{
   background-color: #4CAF50;
   color: black;
@@ -28,12 +29,13 @@ body{
   font-size: 16px;
   margin-left: 10px;
 }
-
+/*class for some <a> tags in my code which will activate when the mouse is hovering over the <a> tag which will make the button resposnive*/
 h1{
   font-size: 150%;
   font-weight: bold;
 }
-
+/*style to set the size of my <h1> tag on my webpage which is used to display my titles*/
 .post{
   padding: 15px 20px;
 }
+/*Style to set the padding for the post div class on my page which makes the posts on the blog have a litle space between the top nav bar and the posts.*/

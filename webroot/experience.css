@@ -1,17 +1,19 @@
 html{
   font-size: 100%;
 }
-
+/*setting font size to be 100% as standard*/
 body{
   font-family: sans-serif,serif;
   background-image: url("background.png");
 }
-
+/*Put font family to sans-serif as first choice and if the computer does not have that style then font family will be serif
+Also changing the background colour to a tile png*/
 .topnav {
   background-color: #333;
   overflow: hidden;
 }
-
+/*class to style the top nov bar on the page here we set the background colour and also set overflow to hidden, this is to make sure
+the content on the navbar does not go off the screen when overflow so the overflow is clipped, and the rest of the content will be invisible*/
 .topnav a {
   float: left;
   color: #f2f2f2;
@@ -20,7 +22,8 @@ body{
   text-decoration: none;
   font-size: 17px;
 }
-
+/*class for each link <a> on the top nav bar. float value is set to left so the navbar starts from the left side of the screen.Text is aligned to
+centre and some padding is added to give it some button like feeling also text decoration is set to none to remove underlining*/
 .topnav h1 {
   float: left;
   color: #f2f2f2;
@@ -28,37 +31,37 @@ body{
   padding: 14px 16px;
   font-size: 17px;
 }
-
+/*Sets the styles of the <h1> tag in the class topnav, giving it some padding,text align and colour to make it stand out as this will be where my name is*/
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
-
+/*Sets the syle of the top navbar class when being hovered over by a mouse.This creates a more responsive top navbar*/
 article{
   margin-left: 15%;
   padding: 10px 16px;
 }
-
+/*This style sets where the article will be by using the margin-left and i have given it some padding to seperate it from the two nav bars*/
 .h1title{
   font-size: 200%;
   font-weight: bold;
 }
-
+/*Style for the h1title class which sets the font weight to bold and size to 200% it is used to style the titles on my webpage*/
 h2{
   font-size: 150%;
   font-weight: 500;
   padding: 10px 10px;
 }
-
+/*Style to show smaller titles on this webpage*/
 p{
   padding: 0px 10px;
 }
-
+/*This style is used on the text within the article and section. It gives a litle padding to seperate it from the title*/
 h3{
   font-size: 110%;
   padding: 0px 10px;
 }
-
+/*Style to show even smaller titles on this webpage*/
 .sidebar {
   text-align: center;
   width: 15%;
@@ -66,19 +69,21 @@ h3{
   position: fixed;
   height: 84.7%;
 }
-
+/*class to style the side nov bar on the page here we set the background colour and also set position to fixed, this is to make sure
+the navbar does not go off the screen. Also set a specific height and gave it a width*/
 .sidebar a {
   display: block;
   color: black;
   padding: 16px;
   text-decoration: none;
 }
-
+/*class for each link <a> on the side nav bar. display is set to block so content starts on a new line and takes up the whole width.
+text decoration is set to none to remove underlinging in <a> tags*/
 .sidebar a:hover {
   background-color: #555;
   color: white;
 }
-
+/*Sets the syle of the side navbar class when being hovered over by a mouse.This creates a more responsive side navbar*/
 @media screen and (max-width: 700px) {
   .sidebar {
     width: 100%;
@@ -88,10 +93,13 @@ h3{
   .sidebar a {float: left;}
   article {margin-left: 0;}
 }
-
+/*This bit of code does a media query and runs if the following results are true: if the size of the screen is less then 700px.
+If this is true the styles of the sidebar nav class and article tag will change to acomodate that screen size*/
 @media screen and (max-width: 400px) {
   .sidebar a {
     text-align: center;
     float: none;
   }
 }
+/*This bit of code does a media query and runs if the following results are true: if the size of the screen is less then 400px.
+If this is true the styles of the sidebar nav class will change to acomodate that screen size*/

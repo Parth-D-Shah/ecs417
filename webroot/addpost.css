@@ -1,12 +1,14 @@
 html{
   font-size: 100%;
 }
-
+/*setting font size to be 100% as standard*/
 body{
   font-family: sans-serif,serif;
   background-image: url("background.png");
 }
-
+/*Put font family to sans-serif as first choice and if the computer does not have that style then font family will be serif
+Also changing the background colour to a tile png*/
 form{
   margin-left: 40%;
 }
+/*Set bounds of the form on the screen to be 40% of the page from the left margin.*/

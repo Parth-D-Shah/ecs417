@@ -1,31 +1,33 @@
 html{
   font-size: 100%;
 }
-
+/*setting font size to be 100% as standard*/
 .h1title{
   padding-top: 15px;
   padding-left: 10px;
   font-size: 150%;
   font-weight: bold;
 }
-
+/*To style the h1title class which is used to style the title to make it stand out more from other text on the page*/
 body{
   font-family: sans-serif,serif;
   background-color: #e0e0e0;
   background-image: url("background.png");
 }
-
+/*Put font family to sans-serif as first choice and if the computer does not have that style then font family will be serif
+Also changing the background colour to a tile png*/
 .topnav {
   background-color: #333;
   overflow: hidden;
 }
-
+/*class to style the top nov bar on the page here we set the background colour and also set overflow to hidden, this is to make sure
+the content on the navbar does not go off the screen when overflow so the overflow is clipped, and the rest of the content will be invisible*/
 .portfolioimg{
     max-width:47%;
     height:auto;
     padding: 15px 20px;
 }
-
+/*Style to set the max width and height of the picture on the page*/
 .topnav a{
   float: left;
   color: #f2f2f2;
@@ -34,13 +36,14 @@ body{
   text-decoration: none;
   font-size: 17px;
 }
-
+/*class for each link <a> on the top nav bar. float value is set to left so the navbar starts from the left side of the screen.Text is aligned to
+centre and some padding is added to give it some button like feeling also text decoration is set to none to remove underlining*/
 .portfolioimg1{
   max-width: 30%;
   height: auto;
   padding: 15px 20px;
 }
-
+/*Style to set the max width and height of the picture on the page*/
 .topnav h1{
   float: left;
   color: #f2f2f2;
@@ -48,17 +51,17 @@ body{
   padding: 14px 16px;
   font-size: 17px;
 }
-
+/*Sets the styles of the <h1> tag in the class topnav, giving it some padding,text align and colour to make it stand out as this will be where my name is*/
 p{
   text-align: center;
   font-size: 125%;
 }
-
+/*This style is used on the text within the article and section. It aligns the text to be centred and increases the font size a little by 0.25%*/
 .topnav a:hover{
   background-color: #ddd;
   color: black;
 }
-
+/*Sets the syle of the top navbar class when being hovered over by a mouse.This creates a more responsive top navbar*/
 .cvbutton{
   background-color: grey;
   color: white;
@@ -69,7 +72,7 @@ p{
   font-size: 120%;
   margin-left: 43%;
 }
-
+/*class for some <a> tags in my code which will give them a button like appearance*/
 .backbutton{
   background-color: grey;
   color: white;
@@ -80,21 +83,22 @@ p{
   font-size: 120%;
   margin-left: 43.5%;
 }
-
+/*class for some <a> tags in my code which will give them a button like appearance*/
 .cvbutton:hover{
   background-color: green;
   color: white;
 }
-
+/*class for some <a> tags in my code which will activate when the mouse is hovering over the <a> tag which will make the button resposnive*/
 .backbutton:hover{
   background-color: green;
   color: white;
 }
-
+/*class for some <a> tags in my code which will activate when the mouse is hovering over the <a> tag which will make the button resposnive*/
 footer{
   padding: 10px 25px;
 }
-
+/*Adding some padding to display the footer correctly on the page*/
 .footercl{
   text-decoration: none;
 }
+/*Sets the styles of the footercl class. removing underlining from <a> tags in the footer*/

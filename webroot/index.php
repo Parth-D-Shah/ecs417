@@ -7,13 +7,13 @@
   <link rel="stylesheet" href="homepage.css">
 </head>
 <body>
-  <div class="topnav">
+  <nav>
     <h1>Parth Shah</h1>
     <a href="blog.php">Blog</a>
     <a href="Portfolio.html">Portfolio/CV</a>
     <a href="Experience.php">Experience</a>
     <a href="Contact.php">Contact</a>
-  </div>
+  <nav>
   <aside>
     <div class="sidebar">
       <?php

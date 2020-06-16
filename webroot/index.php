@@ -7,13 +7,14 @@
   <link rel="stylesheet" href="homepage.css">
 </head>
 <body>
-  <nav>
+<nav>
+  <div class="topnav">
     <h1>Parth Shah</h1>
     <a href="blog.php">Blog</a>
     <a href="Portfolio.html">Portfolio/CV</a>
     <a href="Experience.php">Experience</a>
     <a href="Contact.php">Contact</a>
-  <nav>
+  </div>
   <aside>
     <div class="sidebar">
       <?php
@@ -38,6 +39,7 @@
       <a href="https://www.linkedin.com/in/parth-shah-2025/">LinkedIn</a>
     </div>
   </aside>
+</nav>
   <article>
     <section>
       <header>
